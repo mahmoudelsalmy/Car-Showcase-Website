@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Lenis for Smooth Scrolling
     const lenis = new Lenis({
-        duration: 1.2,
+        duration: 1.0, // Snappier
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         orientation: 'vertical',
         gestureOrientation: 'vertical',
         smoothWheel: true,
-        wheelMultiplier: 1,
+        wheelMultiplier: 1.1,
         smoothTouch: false,
-        touchMultiplier: 2,
+        touchMultiplier: 1.5,
         infinite: false,
     });
 
@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.car-grid')) {
         gsap.from('.premium-card', {
             opacity: 0,
-            y: 60,
-            duration: 0.8,
-            stagger: 0.2,
-            ease: 'power4.out',
+            y: 40,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: 'power2.out',
             scrollTrigger: {
                 trigger: '.car-grid',
-                start: 'top 80%'
+                start: 'top 85%'
             }
         });
     }
