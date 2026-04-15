@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Automotive Experience | Car Showcase</title>
+
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/luxury-theme.css">
+
+    <!-- JS Dependencies (CDNs) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+</head>
+<body>
+
+    <nav class="premium-nav">
+        <div class="nav-logo">
+            <a href="index.html"><h2 style="color: white; letter-spacing: 2px;">LUXE</h2></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="BMW.html">Collection</a></li>
+            <li><a href="mailto:mahmoudelsalmy1@gmail.com">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section" style="background-image: url('Bugatti/download (1).jpeg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h4 class="hero-subtitle">The Art of Engineering</h4>
+            <h1 class="hero-title">Beyond<br>Excellence</h1>
+            <a href="#brands" class="btn-view" style="margin-top: 2rem; display: inline-block;">Explore Brands</a>
+        </div>
+    </header>
+
+    <section id="brands" class="section-padding">
+        <div class="text-center fade-in">
+            <h4 class="card-category">Curated Selection</h4>
+            <h2 style="font-size: 3rem; margin-bottom: 3rem;">World-Class Brands</h2>
+        </div>
+
+        <div class="car-grid">
+            <!-- Brand Card: Bugatti -->
+            <a href="Bugatti.html" class="premium-card">
+                <div class="card-img-wrapper">
+                    <img src="Bugatti/download.jpeg" alt="Bugatti" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">Bugatti</h3>
+                    <p class="card-category">Hypercars</p>
+                </div>
+            </a>
+
+            <!-- Brand Card: Lamborghini -->
+            <a href="lamborghini.html" class="premium-card">
+                <div class="card-img-wrapper">
+                    <img src="Lamborghini/download (1).jpeg" alt="Lamborghini" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">Lamborghini</h3>
+                    <p class="card-category">Exotic Performance</p>
+                </div>
+            </a>
+
+            <!-- Brand Card: Ferrari -->
+            <a href="Ferrari.html" class="premium-card">
+                <div class="card-img-wrapper">
+                    <img src="Ferrari/download.jpeg" alt="Ferrari" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">Ferrari</h3>
+                    <p class="card-category">Racing Heritage</p>
+                </div>
+            </a>
+
+            <!-- Brand Card: Porsche -->
+            <a href="Porsche.html" class="premium-card">
+                <div class="card-img-wrapper">
+                    <img src="Porsche/download (1).jpeg" alt="Porsche" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">Porsche</h3>
+                    <p class="card-category">Precision Driving</p>
+                </div>
+            </a>
+
+            <!-- Brand Card: Rolls-Royce -->
+            <a href="Rolls-Royce.html" class="premium-card">
+                <div class="card-img-wrapper">
+                    <img src="Rolls-Royce/download.jpeg" alt="Rolls-Royce" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">Rolls-Royce</h3>
+                    <p class="card-category">Ultimate Luxury</p>
+                </div>
+            </a>
+
+            <!-- Brand Card: Tesla -->
+            <a href="Tesla.html" class="premium-card">
+                <div class="card-img-wrapper">
+                    <img src="Tesla/download (1).jpeg" alt="Tesla" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3 class="card-title">Tesla</h3>
+                    <p class="card-category">Electric Future</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="text-center mt-2 fade-in">
+            <a href="BMW.html" class="btn-view">View All Collections</a>
+        </div>
+    </section>
+
+    <footer style="padding: 4rem; border-top: 1px solid var(--border-color); text-align: center;">
+        <p style="color: var(--text-secondary);">&copy; 2026 LUXE AUTOMOTIVE. REDESIGNED FOR EXCELLENCE.</p>
+    </footer>
+
+    <script src="JS/luxury-main.js"></script>
+</body>
+</html>

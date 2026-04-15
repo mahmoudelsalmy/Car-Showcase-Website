@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Poppins:wght@200;300;400;600&display=swap');
+
+:root {
+    --bg-primary: #050505;
+    --bg-secondary: #0f0f0f;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent: #d4af37; /* Champagne Gold */
+    --accent-hover: #f1c40f;
+    --card-bg: #121212;
+    --glass-bg: rgba(15, 15, 15, 0.7);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .luxury-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+/* Premium Navbar */
+.premium-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-logo img {
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--bg-primary));
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 10vw, 8rem);
+    margin-bottom: 1rem;
+    line-height: 0.9;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--accent);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+/* Car Grid */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 4rem;
+}
+
+/* Premium Card */
+.premium-card {
+    background: var(--card-bg);
+    border-radius: 0;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.premium-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.premium-card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.card-info {
+    padding: 2rem;
+}
+
+.card-category {
+    font-size: 0.7rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.card-price {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.btn-view {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.btn-view:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+/* Brand Switcher */
+.brand-nav {
+    display: flex;
+    overflow-x: auto;
+    padding: 2rem 4rem;
+    gap: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    scrollbar-width: none;
+}
+
+.brand-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.brand-link {
+    white-space: nowrap;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    opacity: 0.6;
+}
+
+.brand-link:hover, .brand-link.active {
+    opacity: 1;
+    color: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .premium-nav {
+        padding: 1.5rem 2rem;
+    }
+    .car-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        padding: 3rem 2rem;
+    }
+    .hero-title {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* In a real project, implement a mobile menu */
+    }
+    .premium-nav {
+        justify-content: center;
+    }
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    .section-padding {
+        padding: 5rem 1.5rem;
+    }
+    .car-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+    .brand-nav {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Utilities */
+.section-padding { padding: 8rem 4rem; }
+.text-center { text-align: center; }
+.mt-2 { margin-top: 2rem; }
+
+/* Active State for Brand Link */
+.brand-link.active {
+    color: var(--accent);
+    opacity: 1;
+    border-bottom: 2px solid var(--accent);
+}
